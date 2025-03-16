@@ -1,0 +1,1 @@
+docker build -t valtoni/unreal-server:latest .
