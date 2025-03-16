@@ -17,3 +17,6 @@ if (-not $imageExists) {
 
 
 docker run --rm -v ${volumeName}:${cstrikeDir} -p7777:7777/udp -p7778:7778/udp -p8777:8777/tcp --name=$containerName $imageName
+
+#docker image push valtoni/unreal-server:latest
+docker run -p7777:7777/udp -p7778:7778/udp -p8777:8777/tcp --name=unreal_server valtoni/unreal-server:latest

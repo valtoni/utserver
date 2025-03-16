@@ -1,0 +1,19 @@
+[Unit]
+Description=Unreal Tournament
+After=docker.service
+
+[Service]
+ExecStart=docker run -p7777:7777/udp -p7778:7778/udp -p8777:8777/tcp --name=unreal_server valtoni/unreal-server:latest
+ExecStop=docker stop unreal_server
+ExecReload=docker restart unreal_server
+TimeoutStartSec=0
+RestartSec=5
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
+
+# sudo systemctl daemon-reload
+# sudo systemctl enable utserver
+# sudo systemctl start utserver
+# sudo systemctl status utserver

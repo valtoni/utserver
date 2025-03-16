@@ -2,8 +2,8 @@ FROM ubuntu:25.04
 
 ENV BASEDIR="/unrealserver"
 WORKDIR ${BASEDIR}
-ENV UNREAL_SERVER_NAME="unrealquebec"
-ENV UNREAL_HOME="${BASEDIR}/${UNREAL_SERVER_NAME}"
+ENV UNREAL_SERVER_NAME="quebec"
+ENV UNREAL_HOME="${BASEDIR}/${UNREAL_SERVER_NAME}/ut-server"
 
 RUN apt-get update && \
     apt-get install bzip2 && \
@@ -24,4 +24,4 @@ ENV UT_DATA_PATH="${UNREAL_HOME}/System"
 
 WORKDIR ${UNREAL_HOME}
 
-CMD ["/bin/sh", "-c", "${UNREAL_HOME}/ut-server/ucc server DM-Barricade\\?game=Botpack.DeathMatchPlus", "log=/dev/null", "multihome=0.0.0.0"]
+CMD ["/bin/sh", "-c", "${UNREAL_HOME}/ucc server DM-Barricade\\?game=Botpack.DeathMatchPlus", "log=/dev/null", "multihome=0.0.0.0"]
