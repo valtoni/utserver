@@ -11,3 +11,13 @@ docker run -p7777:7777/udp -p7778:7778/udp -p8777:8777/tcp --name=unreal_server 
 ```
 
 [Dockerfile](Dockerfile) was based in that installation of Unreal Admin Wiki <https://wiki.unrealadmin.org/Server_Install_linux?form=MG0AV3>.
+
+## References
+
+https://wiki.unrealadmin.org/Server_Install_linux
+https://wiki.unrealadmin.org/Main_Page
+https://wiki.unrealadmin.org/Unreal_Tournament
+https://ut99.org/ut99.org/viewtopic.php?t=11810
+https://www.oldunreal.com/wiki/index.php?title=UnrealTournament_Server_Guide
+https://unrealadmin.org/forums/showthread.php?t=23628
+https://github.com/RIKIKU/UT99-Tools/tree/main/src
