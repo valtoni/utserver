@@ -1,5 +1,7 @@
 FROM ubuntu:25.04
 
+ARG TARGETARCH
+
 ENV BASEDIR="/unrealserver"
 WORKDIR ${BASEDIR}
 ENV UNREAL_SERVER_NAME="quebec"
@@ -7,7 +9,14 @@ ENV UNREAL_HOME="${BASEDIR}/${UNREAL_SERVER_NAME}/ut-server"
 
 RUN apt-get update && \
     apt-get install bzip2 && \
-    apt-get -y install lib32z1
+    if [ "$TARGETARCH" == "amd64" ]; then \
+        echo "PLATFORM1: $TARGETARCH" \
+        apt-get install -y lib32z1; \
+    else \
+        echo "PLATFORM2: $TARGETARCH" \
+        apt-get install -y zlib1g; \
+    fi
+
 
 COPY ut-server-436.tar.gz ${BASEDIR}
 COPY asu-0.6.tar.gz ${BASEDIR}

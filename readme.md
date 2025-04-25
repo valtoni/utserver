@@ -21,3 +21,4 @@ https://ut99.org/ut99.org/viewtopic.php?t=11810
 https://www.oldunreal.com/wiki/index.php?title=UnrealTournament_Server_Guide
 https://unrealadmin.org/forums/showthread.php?t=23628
 https://github.com/RIKIKU/UT99-Tools/tree/main/src
+https://www.oldunreal.com/downloads/
